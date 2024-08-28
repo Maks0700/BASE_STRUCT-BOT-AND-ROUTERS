@@ -2,7 +2,7 @@ from pydantic import SecretStr
 
 from pydantic_settings import BaseSettings,SettingsConfigDict
 
-import re
+
 class Settings(BaseSettings):
     bot_token:SecretStr
     model_config:SettingsConfigDict=SettingsConfigDict(

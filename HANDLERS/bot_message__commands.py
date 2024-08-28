@@ -30,13 +30,3 @@ async def proceess_message(message:Message):
 
 
 
-# async def proceess_buttons(message:Message):
-#     msg=message.text.lower()
-    
-#     if msg=="Calculations":
-#         await message.answer("Your Calculator",reply_markup=builder.button_calculator())
-#     if msg=="Links":
-#         await message.answer("Your Links",reply_markup=inline_keyboards.links_keyboard())
-#     if msg=="Special buttons":
-#         await message.answer("Your Spcecial buttons",reply_markup=reply_keyboards.special_buttons())
-       

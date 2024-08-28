@@ -6,13 +6,14 @@ from pprint import pprint
 from CALLBACK import pagination
 from HANDLERS import bot_message__commands,user_commands
 from config_reader import config
-
+from MIDDLEWARES.antiflood import Antiflood
 
 
 
 async def main():
     bot=Bot(config.bot_token.get_secret_value(),parse_mode="Markdown")
     dp=Dispatcher()
+    dp.message.middleware(Antiflood(time_limit=1))
     dp.include_routers(
         ####Connect our routers where its exists on packet
         
